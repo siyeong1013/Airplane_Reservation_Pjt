@@ -15,9 +15,9 @@ const initViews = () => {
 
     signUpWrap = document.querySelector('div.sign_up_wrap');
     signInWrap = document.querySelector('div.sign_in_wrap');
-    signModifyWrap=document.querySelector('sign_modify_wrap')
-    reservationWrap=document.querySelector('reservation_wrap')
-    reservationListWrap=document.querySelector("reservationList_wrap")
+    signModifyWrap=document.querySelector('.sign_modify_wrap')
+    reservationWrap=document.querySelector('.reservation_wrap')
+    reservationListWrap=document.querySelector(".reservationList_wrap")
 
 }
 

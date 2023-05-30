@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded',function(){
 
 const init = () => {
     console.log('init() called!');
-
     initViews();
     addEvents();
 
@@ -78,7 +77,7 @@ const addEvents = () => {
             signInedMemberID = u_id; //사용자가 입력한 ID 할당
             setMenuStatus(SIGN_IN_STATUS);
 
-            showSelectedView(RESERVATION_LIST); //list view로 화면 전환
+            showSelectedView(CREATE_RESERVATION); //list view로 화면 전환
 
         }
         else {
@@ -91,5 +90,27 @@ const addEvents = () => {
 
     });
 
+    let signModfiyWrapBtn=document.querySelector('.sign_modify')
+    signModfiyWrapBtn.addEventListener('click',()=>{
+        showSelectedView(UPDATE_INFO)
+        let signModfiyBtn=document.querySelector('.sign_modify_btn')
+        signModfiyBtn.addEventListener('click',()=>{
+            let currentPwd=document.querySelector('.u_pwd').value
+            let checkPwd=document.querySelector('.check_pwd').value
+            let newPwd=document.querySelector('.new_pwd').value
+            if(currentPwd===checkPwd){
+                updateInfo(checkPwd,newPwd,signInedMemberID)
+            }
+            else{
+                console.log("checkpwd를 다시 입력해 주세요.")
+            }
+            currentPwd=''
+            checkPwd=''
+            newPwd=''
+        })
+    })
+
+
+  
 
 }

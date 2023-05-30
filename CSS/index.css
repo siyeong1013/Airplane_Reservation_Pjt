@@ -116,3 +116,10 @@
     border: 1px solid #dadada;
     border-radius: 5px;
 }
+
+#wrap > div.menu_wrap a.sign_modify,
+#wrap > div.menu_wrap a.sign_out,
+#wrap > div.menu_wrap a.reservation,
+#wrap > div.menu_wrap a.reservationList{
+    display: none;
+}
