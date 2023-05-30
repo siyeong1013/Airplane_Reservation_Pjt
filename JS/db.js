@@ -36,12 +36,12 @@ const addReservation = (departure, arrival, departure_date, arrival_date,id) => 
     let reservationArr=airReserveDB.get(id)
     reservationArr.push({departure,arrival,departure_date,arrival_date})
     airReserveDB.set(id,reservationArr)
-    console.log('reserveArr: ', reserveArr)
+    console.log('reserveArr: ', reservationArr)
     
 }
-const searchReservation = () => {
+const searchReservation = (id) => {
     console.log('searchReservation() CALLED!!');
-    let reserveArr = airReserveDB.get();
+    let reserveArr = airReserveDB.get(id);
     console.log('reserveArr: ', reserveArr)
     return reserveArr
 

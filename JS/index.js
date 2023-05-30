@@ -95,22 +95,81 @@ const addEvents = () => {
         showSelectedView(UPDATE_INFO)
         let signModfiyBtn=document.querySelector('.sign_modify_btn')
         signModfiyBtn.addEventListener('click',()=>{
-            let currentPwd=document.querySelector('.u_pwd').value
-            let checkPwd=document.querySelector('.check_pwd').value
-            let newPwd=document.querySelector('.new_pwd').value
-            if(currentPwd===checkPwd){
-                updateInfo(checkPwd,newPwd,signInedMemberID)
+            let currentPwd=document.querySelector('.u_pwd')
+            let checkPwd=document.querySelector('.check_pwd')
+            let newPwd=document.querySelector('.new_pwd')
+            if(newPwd===checkPwd){
+                updateInfo(checkPwd.value,newPwd.value,signInedMemberID.value)
             }
             else{
                 console.log("checkpwd를 다시 입력해 주세요.")
             }
-            currentPwd=''
-            checkPwd=''
-            newPwd=''
+            currentPwd.value=''
+            checkPwd.value=''
+            newPwd.value=''
+            setMenuStatus(SIGN_OUT_STATUS);
+
+            showSelectedView(SIGN_OUT_VIEW);
+               alert("비밀번호가 변경되었습니다.")
+
         })
     })
 
+    let reservation=document.querySelector('.reservation')
+    reservation.addEventListener('click',()=>{
+        showSelectedView(CREATE_RESERVATION)
+    })
+
+    let revBtn=document.querySelector('.rev_btn')
+    revBtn.addEventListener('click',()=>{
+       let userName= document.querySelector('.name_input')
+       let phone= document.querySelector('.name_phone')
+
+       let departure= document.querySelector('.departure')
+       let arrive= document.querySelector('.arrive')
+
+       let departureDate= document.querySelector('.departure_date')
+
+       let arriveDate= document.querySelector('.arrive_date')
+       addReservation(departure.value,arrive.value,departureDate.value,arriveDate.value,signInedMemberID)
+       userName.value=''
+       phone.value=''
+       departure.value=''
+       arrive.value=''
+       departureDate.value=''
+       arriveDate.value=''
+       let rsvListDiv=document.querySelector('.reservationList_wrap')
+       rsvListDiv.replaceChildren()
+
+    })
+
+
+
+    let rsvLisstMenuBtn=document.querySelector('.reservationList')
+    rsvLisstMenuBtn.addEventListener('click',()=>{
+        showSelectedView(RESERVATION_LIST)
+        printList()
+    })
 
   
 
 }
+
+function printList(){
+    let rsvListDiv=document.querySelector('.reservationList_wrap')
+    let arrObj=searchReservation(signInedMemberID)
+    arrObj.forEach((obj) => {
+        rsvListDiv.insertAdjacentHTML('beforeend',`           <div>
+<div>
+<p class="출발날짜">${obj.departure_date}</p>
+<p class="도착날짜">${obj.arrival_date}</p>
+</div>
+<div>
+<p class="출발지">${obj.arrival}</p>
+<p class="도착지">${obj.arrival}</p>
+</div>
+</div>`)
+    });
+
+}
+
