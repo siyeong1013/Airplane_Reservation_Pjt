@@ -1,21 +1,23 @@
 const SIGN_UP_VIEW = 1;
 const SIGN_IN_VIEW = 2;
 const SIGN_OUT_VIEW = 3;
-const DIARY_WRITE_VIEW = 4;
-const DIARY_LIST_VIEW = 5;
-
+const UPDATE_INFO = 4;
+const CREATE_RESERVATION = 5;
+const RESERVATION_LIST=6;
 let signUpWrap = '';
 let signInWrap = '';
-let writeWrap = '';
-let listWrap = '';
-
+let signModifyWrap=''
+let reservationWrap=''
+let reservationListWrap=''
+// sign_modify_wrap
 const initViews = () => {
     console.log('initViews() called!');
 
     signUpWrap = document.querySelector('div.sign_up_wrap');
     signInWrap = document.querySelector('div.sign_in_wrap');
-    writeWrap = document.querySelector('div.write_wrap');
-    listWrap = document.querySelector('div.list_wrap');
+    signModifyWrap=document.querySelector('sign_modify_wrap')
+    reservationWrap=document.querySelector('reservation_wrap')
+    reservationListWrap=document.querySelector("reservationList_wrap")
 
 }
 
@@ -34,15 +36,20 @@ const showSelectedView = (viewNo) => {
             signInWrap.style.display='block';
           
             break;
-        case DIARY_WRITE_VIEW:
+        case UPDATE_INFO:
             signUpWrap.style.display = 'none';
             signInWrap.style.display='none';
-          
+            signModifyWrap.style.display="block";
             break;
-        case DIARY_LIST_VIEW:
+        case CREATE_RESERVATION:
             signUpWrap.style.display = 'none';
             signInWrap.style.display='none';
             
+            break;
+        case RESERVATION_LIST:
+            signUpWrap.style.display = 'none';
+            signInWrap.style.display='none';
+            reservationListWrap.style.display='block';
             break;
     }
 

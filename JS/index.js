@@ -78,7 +78,7 @@ const addEvents = () => {
             signInedMemberID = u_id; //사용자가 입력한 ID 할당
             setMenuStatus(SIGN_IN_STATUS);
 
-            showSelectedView(DIARY_LIST_VIEW); //list view로 화면 전환
+            showSelectedView(RESERVATION_LIST); //list view로 화면 전환
 
         }
         else {
