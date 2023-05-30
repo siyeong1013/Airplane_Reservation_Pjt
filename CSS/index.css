@@ -29,7 +29,7 @@
 
 /* sign_up_wrap START */
 #wrap > div.sign_up_wrap {
-    /* display: none; */
+    display: none;
     text-align: center;
 }
 
@@ -48,7 +48,7 @@
 
 /* sign_in_wrap START */
 #wrap > div.sign_in_wrap {
-    /* display: none; */
+    display: none;
     text-align: center;
 }
 
@@ -67,7 +67,7 @@
 
 /* sign_modify_wrap START */
 #wrap > div.sign_modify_wrap {
-    /* display: none; */
+    display: none;
     text-align: center;
 }
 
@@ -89,6 +89,7 @@
 
 /* reservation_wrap START */
 #wrap > div.reservation_wrap {
+    display: none;
     text-align: center;
 }
 

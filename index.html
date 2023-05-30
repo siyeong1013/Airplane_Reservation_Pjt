@@ -7,6 +7,12 @@
     <link href="./CSS/common.css" rel="stylesheet" type="text/css">
     <link href="./CSS/index.css" rel="stylesheet" type="text/css">
 
+    <script src="./JS/db.js"></script>
+    <script src="./JS/menuChange.js"></script>
+    <script src="./JS/viewChange.js"></script>
+    <script src="./JS/signinSession.js"></script>
+    <script src="./JS/index.js"></script>
+
 </head>
 <body>
     <div id="wrap">
@@ -46,16 +52,19 @@
             <input type="password" name="check_pwd" placeholder="Input user new PWD">
             <br>
             <input type="password" name="new_pwd" placeholder="Input user new PWD again">
+            <br>
             <button>변경하기</button>
         </div>
 
         <div class="reservation_wrap">
+            <span>예약자 명: </span><input type="text" name="name" placeholder="Input reserver name">
+            <span>연락처: </span><input type="text" name="phone" placeholder="Input phone number">
+            <br>
             <span>출발지: </span><input type="text" name="departures" placeholder="Input your departures">
             <span>도착지: </span><input type="text" name="arrivals" placeholder="Input your arrivals">
             <br>
             <span>출발날짜: </span><input type="date" name="departure_date">
             <span>도착날짜: </span><input type="date" name="arrival_date">
-
         </div>
 
         <div class="reservationList_wrap">
