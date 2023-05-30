@@ -29,7 +29,7 @@
 
 /* sign_up_wrap START */
 #wrap > div.sign_up_wrap {
-    display: none;
+    /* display: none; */
     text-align: center;
 }
 
@@ -48,7 +48,7 @@
 
 /* sign_in_wrap START */
 #wrap > div.sign_in_wrap {
-    display: none;
+    /* display: none; */
     text-align: center;
 }
 
@@ -63,4 +63,55 @@
 #wrap > div.sign_in_wrap input[type=button] {
     width: 100px;
     cursor: pointer;
+}
+
+/* sign_modify_wrap START */
+#wrap > div.sign_modify_wrap {
+    /* display: none; */
+    text-align: center;
+}
+
+#wrap > div.sign_modify_wrap input {
+    width: 400px;
+    padding: 10px;
+    margin: 1px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+
+#wrap > div.sign_modify_wrap button {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* reservation_wrap START */
+#wrap > div.reservation_wrap {
+    text-align: center;
+}
+
+#wrap > div.reservation_wrap input {
+    width: 400px;
+    padding: 10px;
+    margin: 1px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+
+#wrap > div.reservation_wrap span {
+    font-size: 1.2em;
+}
+
+/* reservationList_wrap START */
+#wrap > div.reservationList_wrap {
+    display: none;
+}
+
+#wrap > div.reservationList_wrap div {
+    margin: 2px auto; padding: 10px;
+    width: 600px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
 }
