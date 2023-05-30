@@ -9,15 +9,16 @@ let signInWrap = '';
 let signModifyWrap=''
 let reservationWrap=''
 let reservationListWrap=''
+
 // sign_modify_wrap
 const initViews = () => {
     console.log('initViews() called!');
 
     signUpWrap = document.querySelector('div.sign_up_wrap');
     signInWrap = document.querySelector('div.sign_in_wrap');
-    signModifyWrap=document.querySelector('div.sign_modify_wrap')
-    reservationWrap=document.querySelector('div.reservation_wrap')
-    reservationListWrap=document.querySelector("div.reservationList_wrap")
+    signModifyWrap=document.querySelector('div.sign_modify_wrap');
+    reservationWrap=document.querySelector('div.reservation_wrap');
+    reservationListWrap=document.querySelector("div.reservationList_wrap");
 
 }
 

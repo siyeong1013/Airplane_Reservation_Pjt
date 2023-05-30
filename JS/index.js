@@ -39,11 +39,7 @@ const addEvents = () => {
 
         showSelectedView(SIGN_OUT_VIEW);
     });
-
-    let signModifyBtn = document.querySelector('div.menu_wrap a.sign_modify');
-
-
-    
+  
     /* function click event start */
     let signUpBtn = document.querySelector('div.sign_up_wrap input[type=button]');
     signUpBtn.addEventListener('click',function(){
