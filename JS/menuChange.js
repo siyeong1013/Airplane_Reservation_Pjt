@@ -9,11 +9,18 @@ const setMenuStatus = (menuNo) => {
             document.querySelector('div.menu_wrap a.sign_up').style.display = 'inline-block';
             document.querySelector('div.menu_wrap a.sign_in').style.display = 'inline-blick';
             document.querySelector('div.menu_wrap a.sign_out').style.display = 'none';
+            document.querySelector('div.menu_wrap a.sign_modify').style.display = 'none';
+            document.querySelector('div.menu_wrap a.reservation').style.display = 'none';
+            document.querySelector('div.menu_wrap a.reservationList').style.display = 'none';
+
             break;
         case SIGN_IN_STATUS:
             document.querySelector('div.menu_wrap a.sign_up').style.display = 'none';
             document.querySelector('div.menu_wrap a.sign_in').style.display = 'none';
             document.querySelector('div.menu_wrap a.sign_out').style.display = 'inline-block';
+            document.querySelector('div.menu_wrap a.sign_modify').style.display = 'inline-block';
+            document.querySelector('div.menu_wrap a.reservation').style.display = 'inline-block';
+            document.querySelector('div.menu_wrap a.reservationList').style.display = 'inline-block';
             break;
     }
 
