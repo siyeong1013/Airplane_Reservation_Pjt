@@ -53,4 +53,3 @@ const updateInfo=(checkPwd,newPwd,id)=>{
    console.log(checkPwd,newPwd,id)
    memberDB.get(id).u_pwd=newPwd
 }
-
